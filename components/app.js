@@ -1,38 +1,11 @@
 import {Component, View, Attribute} from 'angular2/core';
 import {RouteConfig, RouteParams, ROUTER_DIRECTIVES} from 'angular2/router';
 
-import {Greeter} from './services';
+import {Greeter} from '../services/greeter';
 
-@Component({
-  selector: 'hello',
-  template: '<p>{{ message }}</p>'
-})
-class Hello {
-  constructor(greeter: Greeter) {
-    this.message = greeter.say('hello', 'Angular 2');
-  }
-}
-
-@Component({
-  selector: 'ciao',
-  template: '<p>{{ message }}</p>'
-})
-class Ciao {
-  constructor(greeter: Greeter, routeParams: RouteParams) {
-    this.message = greeter.say('ciao', routeParams.get('name'));
-  }
-}
-
-@Component({
-  selector: 'linker',
-  template: '<p><a [href]="url" [title]="name">{{ name }}</a></p>'
-})
-class Linker {
-  constructor(@Attribute('name') name, @Attribute('url') url) {
-    this.name = name;
-    this.url = url;
-  }
-}
+import {Hello} from '../components/hello';
+import {Ciao} from '../components/ciao';
+import {Linker} from '../components/linker';
 
 @Component({
   selector: 'hello-app',

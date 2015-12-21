@@ -10,18 +10,18 @@ import babelify from 'babelify';
 import del from 'del';
 
 gulp.task('copy', () => {
-  return gulp.src('src/index.html')
+  return gulp.src('index.html')
     .pipe(gulp.dest('public'));
 });
 
 gulp.task('build', ['copy'], () => {
-  const b = browserify('src/index.js')
+  const b = browserify('index.js')
     .transform(babelify);
   return bundle(b);
 });
 
 gulp.task('watch', () => {
-  const b = browserify('src/index.js', watchify.args)
+  const b = browserify('index.js', watchify.args)
     .transform(babelify);
   const w = watchify(b)
     .on('update', () => bundle(w))
