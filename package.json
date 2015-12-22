@@ -1,7 +1,7 @@
 {
-  "name": "babel-angular2-app",
+  "name": "Ops-config-angular2",
   "version": "0.0.1",
-  "description": "A skeleton Angular 2 app built with babel.",
+  "description": "Edaixi Operation configuration front-end project written with Angular2",
   "scripts": {
     "start": "gulp",
     "build": "gulp build",
@@ -9,9 +9,9 @@
     "clean": "gulp clean",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Shuhei Kagawa <shuhei.kagawa@gmail.com>",
-  "repository": "shuhei/babel-angular2-app",
-  "license": "ISC",
+  "author": "zuozuo",
+  "repository": "git@github.com:zuozuo/Ops-config-angular2.git",
+  "license": "MIT",
   "devDependencies": {
     "babel-core": "^6.3.21",
     "babel-eslint": "^5.0.0-beta6",
